@@ -17,5 +17,10 @@
 
 swapper = None
 
+def swapper(list_of_tuples):
+
+  return (list_of_tuples[1], list_of_tuples[0])
+
+
 def run_swapper(list_of_tuples):
   return list(map(swapper, list_of_tuples))
