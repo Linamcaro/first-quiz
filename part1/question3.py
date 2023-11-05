@@ -26,8 +26,39 @@
 # formulas and their outputs in the test file, `question3_test.py`.
 
 # This function should return an oven instance!
+
+
+class MagicalOven:
+
+  def __init__(self):
+    self.ingredients =[]
+    self.temperature = None
+
+  def add(self, item):
+    self.ingredients.append(item)
+
+  def freeze(self):
+    self.temperature = "frozen"
+
+  def boil(self):
+    self.temperature = "boiled"
+  
+  def  wait(self):
+    self.temperature = "room temperature"
+
+  def get_output(self):
+     ingredient_combinations = {
+            ('lead', 'mercury'): 'gold',
+            ('water', 'air'): 'snow',
+            ('cheese', 'dough', 'tomato'): 'pizza',
+        }
+     
+     output = ingredient_combinations.get(tuple(self.ingredients), None)
+     return output
+  
+
 def make_oven():
-  None
+  return MagicalOven()
 
 def alchemy_combine(oven, ingredients, temperature):
   
